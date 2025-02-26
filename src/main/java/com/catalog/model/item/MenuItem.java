@@ -1,7 +1,9 @@
-package com.catalog.model.menuitem;
+package com.catalog.model.item;
 
+import com.catalog.model.money.Currency;
 import com.catalog.model.money.Money;
 import com.catalog.model.restaurant.Restaurant;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -24,10 +26,14 @@ public class MenuItem {
     private String description;
 
     @Embedded
+    @AttributeOverrides({
+            @AttributeOverride(name = "amount", column = @Column(name = "price"))
+    })
     private Money price;
 
     @ManyToOne
     @JoinColumn(name = "restaurant_id", nullable = false)
+    @JsonIgnore
     private Restaurant restaurant;
 
     @Enumerated(EnumType.STRING)

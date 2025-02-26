@@ -1,4 +1,4 @@
-package com.walletapp.model.money;
+package com.catalog.model.money;
 
 public enum CurrencyType {
     USD, INR, EUR, GBP;

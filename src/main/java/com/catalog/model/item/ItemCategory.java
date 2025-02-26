@@ -1,4 +1,4 @@
-package com.catalog.model.menuitem;
+package com.catalog.model.item;
 
 public enum ItemCategory {
     BEVERAGES,

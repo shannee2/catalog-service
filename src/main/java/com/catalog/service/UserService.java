@@ -80,16 +80,20 @@ public class UserService implements UserDetailsService {
     }
 
     public UserResponse verify(UserRequest userRequest) {
+        System.out.println("Verifying user");
         String token = null;
         User user = null;
         try {
+            System.out.println(userRequest.getUsername()+" "+userRequest.getPassword());
             Authentication authentication = authManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
                             userRequest.getUsername(),
                             userRequest.getPassword()
                     )
             );
+            System.out.println("Got authentication: "+authentication);
             user = getUserByUsername(userRequest.getUsername());
+            System.out.println("Got user: "+user);
             if (authentication.isAuthenticated()) {
                 token = jwtService.generateToken(user.getId());
             } else {

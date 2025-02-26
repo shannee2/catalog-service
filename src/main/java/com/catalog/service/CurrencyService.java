@@ -1,8 +1,8 @@
-package com.walletapp.service;
+package com.catalog.service;
 
-import com.walletapp.model.money.Currency;
-import com.walletapp.model.money.CurrencyType;
-import com.walletapp.repository.CurrencyRepository;
+import com.catalog.model.money.Currency;
+import com.catalog.model.money.CurrencyType;
+import com.catalog.repository.CurrencyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

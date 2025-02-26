@@ -1,6 +1,7 @@
-package com.walletapp.model.money;
+package com.catalog.model.money;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Embeddable;
+import jakarta.persistence.ManyToOne;
 
 
 @Embeddable
