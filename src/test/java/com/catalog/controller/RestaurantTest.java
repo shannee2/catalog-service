@@ -1,4 +1,4 @@
-package com.catalog.model.restaurant;
+package com.catalog.controller;
 
 import com.catalog.dto.restaurants.RestaurantRequest;
 import com.catalog.model.restaurant.Restaurant;
